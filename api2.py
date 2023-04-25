@@ -70,13 +70,39 @@ def addUser():
     domain_02 = domain_01.set_index('ID')
 
     print('domain_02 :', domain_02)
-    print('ruta  :', os.path.dirname(__name__) +'phishing_clf_01.pkl')
+    
+    
+    
 
     #Importar objetos -modelos
-    regRF11 = joblib.load(os.getcwd() +'\phishing_clf_01.pkl')
-    leMake= joblib.load(os.getcwd()+ '\leMake_01.pkl')
-    leModel= joblib.load(os.getcwd() + '\leModel_01.pkl')
-    leState= joblib.load(os.getcwd() + '\leState_01.pkl')
+    print('ruta  os.path.dirname(__name__) :', os.path.dirname(__name__) +'phishing_clf_01.pkl')
+    try:
+        regRF11 = joblib.load(os.path.dirname(__name__)  +'\phishing_clf_01.pkl')
+        leMake= joblib.load(os.path.dirname(__name__) + '\leMake_01.pkl')
+        leModel= joblib.load(os.path.dirname(__name__)  + '\leModel_01.pkl')
+        leState= joblib.load(os.path.dirname(__name__)  + '\leState_01.pkl')
+    except:
+        pass
+        
+    print('ruta con os.getcwd() \+ :', os.getcwd() +'\phishing_clf_01.pkl')    
+    try:
+        regRF11 = joblib.load(os.getcwd() +'\phishing_clf_01.pkl')
+        leMake= joblib.load(os.getcwd()+ '\leMake_01.pkl')
+        leModel= joblib.load(os.getcwd() + '\leModel_01.pkl')
+        leState= joblib.load(os.getcwd() + '\leState_01.pkl')
+    except:
+        pass
+    
+    print('ruta con os.getcwd() /+ :', os.getcwd() +'/phishing_clf_01.pkl')     
+    try:
+        regRF11 = joblib.load(os.getcwd() +'/phishing_clf_01.pkl')
+        leMake= joblib.load(os.getcwd()+ '/leMake_01.pkl')
+        leModel= joblib.load(os.getcwd() + '/leModel_01.pkl')
+        leState= joblib.load(os.getcwd() + '/leState_01.pkl')
+    except:
+        pass    
+    
+
 
     domain_02["State"]=leState.transform(domain_02.State)
     domain_02["Make"]=leMake.transform(domain_02.Make)
