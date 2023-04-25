@@ -70,7 +70,7 @@ def addUser():
     domain_02 = domain_01.set_index('ID')
 
     print('domain_02 :', domain_02)
-    print('ruta  :', os.path.dirname(__name__) +'prediccion_precio_autos)
+    print('ruta  :', os.path.dirname(__name__) +'phishing_clf_01.pkl')
 
     #Importar objetos -modelos
     regRF11 = joblib.load(os.path.dirname(__name__) +'prediccion_precio_autos/phishing_clf_01.pkl')
