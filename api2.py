@@ -73,10 +73,10 @@ def addUser():
     print('ruta  :', os.path.dirname(__name__) +'phishing_clf_01.pkl')
 
     #Importar objetos -modelos
-    regRF11 = joblib.load(os.path.dirname(__name__) +'prediccion_precio_autos_02/phishing_clf_01.pkl')
-    leMake= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos_02/leMake_01.pkl')
-    leModel= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos_02/leModel_01.pkl')
-    leState= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos_02/leState_01.pkl')
+    regRF11 = joblib.load(os.getcwd() +'\phishing_clf_01.pkl')
+    leMake= joblib.load(os.getcwd()+ '\leMake_01.pkl')
+    leModel= joblib.load(os.getcwd() + '\leModel_01.pkl')
+    leState= joblib.load(os.getcwd() + '\leState_01.pkl')
 
     domain_02["State"]=leState.transform(domain_02.State)
     domain_02["Make"]=leMake.transform(domain_02.Make)
