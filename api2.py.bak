@@ -70,12 +70,13 @@ def addUser():
     domain_02 = domain_01.set_index('ID')
 
     print('domain_02 :', domain_02)
+    print('ruta  :', os.path.dirname(__name__) +'prediccion_precio_autos)
 
     #Importar objetos -modelos
-    regRF11 = joblib.load(os.path.dirname(__name__) + 'phishing_clf_01.pkl')
-    leMake= joblib.load(os.path.dirname(__name__) + 'leMake_01.pkl')
-    leModel= joblib.load(os.path.dirname(__name__) + 'leModel_01.pkl')
-    leState= joblib.load(os.path.dirname(__name__) + 'leState_01.pkl')
+    regRF11 = joblib.load(os.path.dirname(__name__) +'prediccion_precio_autos/phishing_clf_01.pkl')
+    leMake= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos/leMake_01.pkl')
+    leModel= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos/leModel_01.pkl')
+    leState= joblib.load(os.path.dirname(__name__) + 'prediccion_precio_autos/leState_01.pkl')
 
     domain_02["State"]=leState.transform(domain_02.State)
     domain_02["Make"]=leMake.transform(domain_02.Make)
