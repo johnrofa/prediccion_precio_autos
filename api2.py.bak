@@ -84,7 +84,7 @@ def addUser():
     except:
         pass
         
-    print('ruta con os.getcwd() + :', os.getcwd() +'\phishing_clf_01.pkl')    
+    print('ruta con os.getcwd() \+ :', os.getcwd() +'\phishing_clf_01.pkl')    
     try:
         regRF11 = joblib.load(os.getcwd() +'\phishing_clf_01.pkl')
         leMake= joblib.load(os.getcwd()+ '\leMake_01.pkl')
@@ -93,7 +93,7 @@ def addUser():
     except:
         pass
     
-    print('ruta con os.getcwd() + :', os.getcwd() +'/phishing_clf_01.pkl')     
+    print('ruta con os.getcwd() /+ :', os.getcwd() +'/phishing_clf_01.pkl')     
     try:
         regRF11 = joblib.load(os.getcwd() +'/phishing_clf_01.pkl')
         leMake= joblib.load(os.getcwd()+ '/leMake_01.pkl')
