@@ -76,11 +76,12 @@ def addUser():
 
     #Importar objetos -modelos
 
-    print('ruta con os.getcwd() /+ :', os.getcwd() +'/phishing_clf_01.pkl')     
-    regRF11 = joblib.load(os.getcwd() +'/phishing_clf_01.pkl')
-    leMake= joblib.load(os.getcwd()+ '/leMake_01.pkl')
+    print('ruta con os.getcwd() /+ :', os.getcwd() +'/phishing_clf_01.pkl') 
+
+    leMake= joblib.load(os.getcwd()+ '/leMake_01.pkl')    
     leModel= joblib.load(os.getcwd() + '/leModel_01.pkl')
     leState= joblib.load(os.getcwd() + '/leState_01.pkl')
+    regRF11 = joblib.load(os.getcwd() +'/phishing_clf_01.pkl')
   
     
 
